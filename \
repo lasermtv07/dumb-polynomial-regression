@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+
+# params
+cc=5 # <-- number of coefficients
+pt=[] # <-- set of points to train on
+
+c=[]
+# generate default array of coefficients
+for i in range(0,cc):
+	c.append(1)
+print(c)
+
+def f(c,x):
+	cc=len(c)
+	s=0
+	for i in range(0,cc):
+		s+=(x**(cc-i))*c[cc-i]
+	return s
+
+print(f(c,-1))
